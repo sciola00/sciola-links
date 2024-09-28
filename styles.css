@@ -1,0 +1,100 @@
+/* Impostazioni di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sfondo animato */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0c0c0c 0%, #434343 100%); /* Gradiente scuro */
+    animation: gradientAnimation 5s ease infinite;
+    z-index: -1; /* Sfondo dietro */
+}
+
+/* Animazione gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Contenitore principale */
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(20, 20, 20, 0.8); /* Sfondo scuro e semi-trasparente per contrasto */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto; /* Centrato orizzontalmente */
+    color: #ffffff;
+}
+
+/* Immagine del profilo */
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin-bottom: 10px;
+}
+
+.nickname {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Pulsanti dei link */
+.btn {
+    padding: 15px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* Aggiunge spazio tra icona e testo */
+.btn i {
+    margin-right: 10px;
+}
+
+/* Hover sui pulsanti */
+.btn:hover {
+    background-color: #ffffff;
+    color: #121212;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6);
+}
